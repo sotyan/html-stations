@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+}
+header{
+    /* position: fixed; */
+    height: 40px;
+    background-color: #ffffff;
+}
+body{
+    background-color: #C4C4C4;
+}
+footer{
+    height: 40px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+
+
+.card_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C4C4C4;
+    flex-wrap: wrap; /* 折り返し */
+}
+.card{
+    background-color: #ffffff;
+    padding: 10px;
+    margin-right: 50px;
+    float: left;
+    margin: 20px;
+}
+.card__img-top{
+    width: 288px;
+    height: 182px;
+    margin-bottom: 10px;
+}
+.card__title{
+    color: #282828;
+    size: 14px;
+    @media screen and (max-width: 768px){
+        font-size: 10px;
+    }
+    @media screen and (max-width: 320px){
+        font-size: 8px;
+    }
+}
+.card__description{
+    color: #282828;
+    size: 12px;
+    @media screen and (max-width: 768px){
+        font-size: 7px;
+    }
+    @media screen and (max-width: 320px){
+        display: none;
+    }
+}
