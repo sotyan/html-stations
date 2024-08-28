@@ -1,5 +1,5 @@
 async function main() {
-    const results = await getData();
+    const results = await getData(); // awaitによってgetData()の処理が終わるまで次に進まない
     const elem = document.getElementById("result");
     results.forEach(result => {
         let li = document.createElement('li');

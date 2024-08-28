@@ -1,18 +1,20 @@
 function getData() {
     // これから作ろうとしているもので、JavaScriptでフルネームを生成する必要が出てきました。
     // ただ現状持っている情報では、名前と苗字をそれぞれのみしかありません。
-    // そのため、JavaScriptで連結させて生成することにしました。
+    // そのため、JavaScriptで連結させて生成することにしました。（追記：mapで）
     const test = [
         { id: 1, first_name: '優', family_name: '大木', affiliation: 'TechTrain', is_student: false },
         { id: 2, first_name: '太郎', family_name: '山田', affiliation: 'HogeHoge大学', is_student: true }
     ];
-    return test.map(buildFullName)
+    return test.map(buildFullName) // test内のオブジェクト{}がそれぞれ渡される(mapによって)
 }
 
 function buildFullName(data) {
     // Station14の問題はこちらです。想定する答えをここを書いてください。
     // 氏名がわかるようにしつつ、半角スペースで繋いでください。
     // またtest配列のそれぞれのオブジェクトに対して、full_nameのプロパティが追加されるように実装すること
+    const full_name = data.family_name + ' ' + data.first_name;
+    return {...data, full_name}
 }
 
 // 出力が想定される答え
