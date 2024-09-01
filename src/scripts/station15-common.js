@@ -1,4 +1,5 @@
 async function main() {
+    console.log("fds");
     const results = await getData();
     const elem = document.getElementById("result");
     results.forEach(result => {
